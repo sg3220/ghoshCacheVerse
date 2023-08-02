@@ -1,0 +1,47 @@
+.Header {
+  background-color: transparent;
+  height: 100vh;
+  width: calc(100vw - 4rem);
+  @include respond(Tablet-Portrait) {
+    width: 100vw;
+  }
+  &--Video {
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+  }
+  &--Company-Logo {
+    height: 12.5rem;
+    width: 12.5rem;
+    border-radius: 7rem;
+    position: absolute;
+    top: 2.5rem;
+    left: 2.5rem;
+    @include respond(Smartphone) {
+      height: 15rem;
+      width: 15rem;
+      border-radius: 8rem;
+    }
+  }
+  &--Company-Name {
+    background-color: transparent;
+    height: 5rem;
+    width: 100rem;
+    @include respond(Tablet-Landscape) {
+      height: 6rem;
+    }
+    @include respond(Tablet-Portrait) {
+      height: 8rem;
+    }
+    @include respond(Smartphone) {
+      height: 10rem;
+    }
+  }
+  &--Company-Tagline {
+    background-color: transparent;
+    height: 5rem;
+    width: 100rem;
+  }
+}

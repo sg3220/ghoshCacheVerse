@@ -1,0 +1,24 @@
+.u-display-row {
+  display: flex;
+  flex-direction: row;
+}
+.u-display-column {
+  display: flex;
+  flex-direction: column;
+}
+.u-center-center {
+  justify-content: center;
+  align-items: center;
+}
+.u-image-small {
+  height: 5rem;
+  width: 5rem;
+}
+.u-image-medium {
+  height: 10rem;
+  width: 10rem;
+}
+.u-image-large {
+  height: 15rem;
+  width: 15rem;
+}

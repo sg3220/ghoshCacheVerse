@@ -1,0 +1,98 @@
+.box02 {
+  height: 60rem;
+  width: 100rem;
+  @include respond(Tablet-Landscape) {
+    height: 80rem;
+  }
+  @include respond(Tablet-Portrait) {
+    height: 67.5rem;
+  }
+  @include respond(Smartphone) {
+    height: 100rem;
+  }
+  background-color: trans;
+
+  &--boxA {
+    background-color: $color-highlight;
+
+    height: 30rem;
+    width: 40rem;
+
+    z-index: 3;
+    @include respond(Tablet-Landscape) {
+      height: 40rem;
+      width: 50rem;
+    }
+    @include respond(Tablet-Portrait) {
+      height: 40rem;
+      width: 50rem;
+    }
+    @include respond(Smartphone) {
+      height: 60rem;
+      width: 70rem;
+    }
+    position: absolute;
+    clip-path: polygon(0 0, 100% 100%, 100% 100%, 0 100%);
+    transform: translateY(12.5rem);
+  }
+  &--boxB {
+    background-color: $color-highlight;
+
+    border-top: none;
+
+    height: 30rem;
+    width: 40rem;
+    @include respond(Tablet-Landscape) {
+      height: 40rem;
+      width: 50rem;
+    }
+    @include respond(Tablet-Portrait) {
+      height: 40rem;
+      width: 50rem;
+    }
+    @include respond(Smartphone) {
+      height: 60rem;
+      width: 70rem;
+    }
+    z-index: 2;
+    position: absolute;
+    clip-path: polygon(0 100%, 100% 0, 100% 100%, 0 100%);
+    transform: translateY(12.5rem);
+  }
+  &--boxC {
+    @include respond(Smartphone) {
+      transform: scale(1.5);
+    }
+    background-color: $color-text-light;
+    border: 10px solid white;
+    border-radius: 20px;
+
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    height: 40rem;
+    width: 30rem;
+    @include respond(Tablet-Landscape) {
+      height: 50rem;
+      width: 40rem;
+    }
+    @include respond(Smartphone) {
+      height: 70rem;
+      width: 60rem;
+      transform: translateY(-5rem);
+    }
+    z-index: 1;
+    position: absolute;
+    transform: translateY(-6rem);
+  }
+  transition: all 2s;
+}
+
+.imageinMail {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 2.5rem;
+  overflow: hidden;
+  margin: 1rem;
+  background-size: cover;
+}

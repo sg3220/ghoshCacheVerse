@@ -1,0 +1,165 @@
+.main {
+  height: 10%;
+  padding: 0;
+  margin: 0;
+}
+.sectionIntroduction {
+  height: 66rem;
+  width: 146rem;
+
+  position: relative;
+
+  .companyLogo {
+    height: 8rem;
+    width: 8rem;
+    border-radius: 4rem;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+  }
+}
+.sectionPurpose {
+  background-color: $color-text-light;
+
+  height: 85rem;
+  width: 146rem;
+
+  justify-content: space-evenly;
+  align-items: center;
+  transform: skewY(2.5deg);
+  margin-top: -5rem;
+
+  .purposeTitle {
+    transform: skewY(-2.55deg);
+    padding-top: 5rem;
+    height: 10rem;
+    width: 60rem;
+    background-color: transparent;
+  }
+}
+.sectionProjects {
+  background-image: linear-gradient(
+    to left bottom,
+    $color-primary-1,
+    $color-primary-2
+  );
+  height: 85rem;
+  width: 146rem;
+  justify-content: space-evenly;
+  align-items: center;
+  transform: skewY(-2.5deg);
+  margin-top: -7.5rem;
+}
+
+.sectionCard {
+  //   height: calc(100vh - 6rem);
+  //   width: calc(100vw - 6rem);
+  background-color: $color-text-light;
+  margin-top: -6rem;
+  height: 78.5rem;
+  width: 146rem;
+
+  transform: skewY(2.5deg);
+  &__centerkarnahai {
+    height: 68.5rem;
+    width: 146rem;
+    transform: skewY(-2.5deg);
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+.mailAnimation {
+  clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+  background-image: linear-gradient(
+    to left bottom,
+    $color-primary-1,
+    $color-primary-2
+  );
+  height: 82rem;
+  width: 146rem;
+  transform: translateY(-5rem);
+}
+.contactUs {
+  height: 72rem;
+  width: 146rem;
+  background-image: linear-gradient(to right, #c33764, #1d2671);
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
+  transform: translateY(-10rem);
+}
+.footer {
+  background-color: $color-text-darkest;
+
+  height: 72rem;
+  width: 146rem;
+
+  justify-content: space-evenly;
+  align-items: center;
+  transition: transform 0.4s;
+  &:hover .footer--company-text-component--pane-02--section02 {
+    transform: rotate(10deg);
+  }
+  .footer-list {
+    list-style-type: none;
+  }
+  li {
+    background-color: $color-text-darkest;
+    float: left;
+    margin: 1rem;
+    transition: all 0.2s ease;
+    &:hover {
+      transform: scale(1.2) skewY(5deg);
+      box-shadow: 0 1rem 1rem $color-text-darkest;
+    }
+  }
+  &--company-logo-component {
+    height: 15rem;
+    width: 15rem;
+    background-image: linear-gradient(
+      to right bottom,
+      $color-primary-1,
+      $color-primary-2
+    );
+    border-radius: 7.5rem;
+    overflow: hidden;
+    z-index: 10;
+  }
+  &--company-text-component {
+    background-color: transparent;
+
+    height: 15rem;
+    width: 120rem;
+
+    justify-content: space-between;
+    align-items: center;
+    &--pane-01 {
+      background-color: blue;
+      border-top: 0.25rem solid $color-text-light;
+      color: $color-text-light;
+
+      height: 15rem;
+      width: 50rem;
+    }
+    &--pane-02 {
+      background-color: green;
+      border-top: 0.25rem solid $color-text-light;
+      font-size: 1.5rem;
+      height: 15rem;
+      width: 50rem;
+      &--section01 {
+        height: 6rem;
+        width: 50rem;
+        background-color: violet;
+      }
+      &--section02 {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+
+        height: 9rem;
+        width: 50rem;
+
+        padding: 1rem;
+        background-color: indigo;
+      }
+    }
+  }
+}

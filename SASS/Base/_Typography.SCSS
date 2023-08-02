@@ -1,0 +1,149 @@
+body {
+  box-sizing: border-box;
+  font-family: "Source Code Pro", monospace;
+  font-size: 1rem;
+}
+
+.heading-primary {
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary-1,
+    $color-primary-2
+  );
+  color: transparent;
+  font-family: "Press Start 2P", cursive;
+  font-size: 3rem;
+  @include respond(Tablet-Portrait) {
+    font-size: 4rem;
+  }
+  @include respond(Smartphone) {
+    font-size: 4.5rem;
+  }
+  letter-spacing: 1rem;
+}
+.heading-primary-sub {
+  color: $color-highlight;
+  font-family: "Press Start 2P", cursive;
+  font-size: 3rem;
+  @include respond(Tablet-Landscape) {
+    font-size: 4rem;
+  }
+  @include respond(Smartphone) {
+    font-size: 4.5rem;
+  }
+  letter-spacing: 1rem;
+}
+
+.heading-secondary {
+  font-family: "Press Start 2P", cursive;
+  font-family: "Quicksand", sans-serif;
+  font-family: "Roboto Mono", monospace;
+  font-family: "Sedgwick Ave Display", cursive;
+  font-family: "Source Code Pro", monospace;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+}
+
+.heading-tertiary {
+  color: $color-highlight;
+  font-family: "Source Code Pro", monospace;
+  font-size: 2rem;
+  @include respond(Tablet-Portrait) {
+    font-size: 3rem;
+    line-height: 2rem;
+  }
+  @include respond(Smartphone) {
+    font-size: 4rem;
+  }
+  line-height: 1.75rem;
+}
+.purposeTitle,
+.projectsTitle {
+  font-family: "Press Start 2P", cursive;
+}
+.link {
+  text-decoration: none;
+  color: $color-highlight;
+}
+.link-footer {
+  text-decoration: none;
+  color: $color-text-light;
+  transition: all 0.2s ease;
+  &:hover {
+    color: $color-primary-1;
+  }
+}
+.styledInlineWord {
+  font-family: "Press Start 2P", cursive;
+  letter-spacing: 0rem;
+  font-size: 1rem;
+  font-weight: 200;
+  transform: skew(1deg, 1deg);
+
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary-1,
+    $color-primary-2
+  );
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.footer-text-style {
+  font-size: 1.5rem;
+  font-family: "Source Code Pro", monospace;
+}
+.attribution-link {
+  border-radius: 1rem;
+  border: 2px solid $color-text-light;
+
+  background-color: $color-primary-1;
+  color: $color-highlight;
+
+  padding: 0.25rem 0.5rem;
+  text-decoration: none;
+
+  //--> Mandatory Things:
+  position: relative;
+  transition: all 0.1s;
+  z-index: 1;
+
+  &::after {
+    background-image: linear-gradient(
+      to right bottom,
+      $color-primary-1,
+      $color-primary-2
+    );
+    //--> To Match The Parent Element
+    border: 2px solid $color-text-light;
+    border-radius: 1rem;
+    padding: 0.25rem 0.5rem;
+    //--> Mandatory Things:
+    content: "";
+    display: block;
+    position: absolute;
+    top: -0.05rem;
+
+    height: 100%;
+    width: 100%;
+
+    transition: all 0.2s ease;
+    z-index: -1;
+  }
+
+  &:hover {
+    border: none;
+    background-color: transparent;
+    font-size: 1.75rem;
+    &::after {
+      transform: scaleY(1.05) scaleX(1.1);
+      animation-name: Rotation;
+      animation-duration: 0.6s;
+      animation-timing-function: ease;
+      animation-iteration-count: infinite;
+    }
+  }
+}

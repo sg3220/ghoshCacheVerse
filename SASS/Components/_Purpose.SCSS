@@ -1,0 +1,117 @@
+.Purpose--Explanation {
+  background-color: transparent;
+  flex-wrap: wrap;
+  height: 50rem;
+  width: 100rem;
+  @include respond(Tablet-Portrait) {
+    height: 80rem;
+    width: 75rem;
+  }
+  @include respond(Smartphone) {
+    height: 100rem;
+    width: 90rem;
+    justify-content: center;
+  }
+  &--block1 {
+    background-color: transparent;
+    height: 50rem;
+    width: 50rem;
+    @include respond(Tablet-Portrait) {
+      width: 70rem;
+    }
+    @include respond(Smartphone) {
+      width: 80rem;
+      height: 60rem;
+    }
+    justify-content: center;
+    align-items: center;
+    padding-left: 1rem;
+    &__text {
+      color: $color-text-darkest;
+      text-align: left;
+      font-size: 1.5rem;
+      font-weight: 800;
+      @include respond(Tablet-Portrait) {
+        font-size: 2rem;
+        text-align: center;
+      }
+      @include respond(Smartphone) {
+        font-size: 2.25rem;
+        text-align: center;
+        line-height: 2.25rem;
+      }
+    }
+  }
+  &--block2 {
+    background-color: transparent;
+    height: 50rem;
+    width: 50rem;
+    @include respond(Tablet-Portrait) {
+      height: 30rem;
+    }
+    position: relative;
+    &--purposeImage1 {
+      position: absolute;
+      height: 15rem;
+      width: 20rem;
+      top: 15rem;
+      @include respond(Tablet-Portrait) {
+        top: 5rem;
+      }
+      @include respond(Smartphone) {
+        top: 7.5rem;
+      }
+      left: 7.5rem;
+      z-index: 4;
+      transition: all 0.2s ease;
+      &:hover {
+        z-index: 6;
+        outline: 1rem solid $color-primary-1;
+        outline-offset: 1rem;
+        transform: scaleX(1.2) scaleY(1.1);
+      }
+    }
+    &--purposeImage2 {
+      position: absolute;
+      height: 15rem;
+      width: 20rem;
+      top: 12.5rem;
+      @include respond(Tablet-Portrait) {
+        top: 2.5rem;
+      }
+      @include respond(Smartphone) {
+        top: 5rem;
+      }
+      left: 25rem;
+      z-index: 3;
+      transition: all 0.2s ease;
+      &:hover {
+        z-index: 6;
+        outline: 1rem solid $color-primary-1;
+        outline-offset: 1rem;
+        transform: scaleX(1.2) scaleY(1.1);
+      }
+    }
+    &--purposeImage3 {
+      position: absolute;
+      height: 15rem;
+      width: 15rem;
+      top: 27.5rem;
+      @include respond(Tablet-Portrait) {
+        top: 15rem;
+      }
+      @include respond(Smartphone) {
+        top: 17.5rem;
+      }
+      left: 20rem;
+      z-index: 5;
+      transition: all 0.2s ease;
+      &:hover {
+        z-index: 6;
+        outline: 1rem solid $color-primary-1;
+        outline-offset: 1rem;
+        transform: scaleX(1.2) scaleY(1.1);
+      }
+    }
+  }
+}
